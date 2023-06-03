@@ -212,6 +212,8 @@ IMAGEM DE FUNDO
 
 body {background-image: url(imagens/wallpaper001.jpg);}
 
-
+ALINHAR:
+background-position: center center;
+height: 98vh;
 
 
