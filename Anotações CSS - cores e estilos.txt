@@ -1,0 +1,212 @@
+-Cores de fundo e nas letras: não usar inline(para cada coisa)
+->tag style depois de "title"
+
+body {
+background-color;
+font-family;
+font-size;
+}
+
+h1 {
+color;
+background-color;
+}
+
+h2 {
+
+xxx
+}
+
+P {
+text=align: justify;
+}
+
+--> Colocar em todas as páginas o mesmo estilo:
+-copia desde body { ... }
+-cria nova página style.css (segura ctrl e clica no link q nao existe ainda, criar)
+-cola código com as infos lá
+-<link rel="stylesheet" href="style.css"> vai em todas as paginas
+-na página style.css -> @charset "UTF-8"; DEPOIS AS INFORMAÇÕES
+
+->> Style local (parágrafos ou infos específicas)
+-abaixo do link, <style> h1 { text-decoration;}</style>
+
+--------
+Representação de cores: 
+<!--Cores hexadecimais--><h2 style="background-color: #0000ff; color: #000000;">Exemplo de cores</h2>
+<!--Cores por RGB (Red, green, blue)--><h2 style="background-color: rgb(0, 0, 255);">Exemplo de cores</h2>
+<!--Cores por HSL (Hue, Saturation, Luminosity)-->   <h2 style="background-color: hsl(240, 100%, 50%);">Exemplo de cores</h2>
+***ou escolhe manual
+
+-------
+Gradiente
+<sytle>
+ * { /* Configuração global das css */ height: 100% }
+body { background-image: linear-gradient(to top, #DDC8E3 10%(EXEMPLO), #A932C9, #43294A); background-attachment: fixed;}
+</style>
+
+-----------------
+Configurando uma página em CSS
+
+->style.css
+
+@charset "UTF-8";
+
+{
+    font-family: Arial, Helvetica, sans-serif;
+    /*height: 100%;*/}
+body {background-image: linear-gradient(to right, #F2E8DF, #F2C6C2);}
+
+main {background-color: #ffffff;
+      width: 700px; (TAMANHO DA CAIXA)
+      padding: 10px; (ESPAÇO EM VOLTA DO TEXTO)
+      margin: auto;
+      border-radius: 20px; (ARREDONDAMENTO DA CAIXA)
+      box-shadow: 5px 5px 15px #aaa39dc5; (4ª COR ESCURECIDA E OPACIDADE DIMINUIDA)
+    }
+
+h1 {color: #F28585;
+    text-align: center;
+    text-shadow: 1px 1px 2px #b06161a4;} (COR DA LETRA ESCURECIDA E OPACIDADE DIMINUIDA)
+h2 {color: #F2B263;}
+p {text-align: justify;}
+-------------------
+Fontes:
+
+font-family: Arial, Helvetica, sans-serif (SEMPRE COLOCAR PADRÃO NO FIM)
+
+->font-size (USAR PX-absolutas E EM-relativas) 
+*16px tamanho normal = 1em
+*dar preferência para EM
+->font-weight(lighter/normal/bold/bolder): ou 100 a 900 
+->font-style: italic/normal
+->text-decoration: underline (SUBLINHADO)
+
+->SHORTHAND FONT: (RESUME ASSIM)
+
+(font-style -> font-weight -> font-size -> font-family)
+
+font: italic bolder 3em 'Work Sans', sans-serif; 
+
+->BUSCAR NO FONTS.GOOGLE
+@import após <style> e cód css na parte que quer a fonte
+->BAIXAR NO DAFONT
+-joga fonte na pasta FONTES
+após style->
+@font-face { 
+font-family: 'NOME'; 
+src: url('FONTES/NOME DO ARQUIVO.OTF') format('opentype'), url('FONTES/NOME DO ARQUIVO.TTF') format('truetype'); 
+font-weight: normal;
+font-style: normal; }
+
+-----------------
+
+PARÁGRAFOS:
+-> na parte de style, p {text-indent: 30px}
+
+--------
+
+DESTACANDO TÍTULO PRINCIPAL
+-na página normal: <h1 id="principal">
+-no styles: h1#principal { INFOS}
+
+->Em HTML id = # em CSS
+->id principal usa só 1 vez
+->estilo em mesmos itens -> <h2 class="NOME EXEMPLO/BASICO">NOME</h2>
+
+---------
+
+DESTAQUES DE BACKGROUND, EXEMPLO
+
+-no style:
+.destaque {background-color: #}
+
+-na pagina
+<h1 class="basico destaque">
+
+*cuidar da hierarquia.
+-no HTML class = . no CSS
+-pode ir em vários
+--------------
+
+DIV (divisorias, blocos)
+
+- dentro de <style> da pagina
+div {display: inline-block;
+    background-color: lightgray;
+     border: 1px solid black;
+     text-align: center;
+     height: 200px;
+     width: 200px;}
+
+div:hover {background-color: black (QUANDO PASSA O MOUSE)
+
+-no <body>
+<div id="d1">01</div> 
+
+-----------
+DIV COM HOVER (aparece quando passa o mouse)
+
+-cria um hover.html
+-inicia o codigo, no style:
+
+div > p { (TODOS PARAGRAFOS NO DIV)
+display: none; (VAI FICAR OCULTO)}
+
+div:hover > p {
+display: block;
+color: white;
+background-color: red;}
+
+----------
+
+LINKS -> PSEUDO-CLASSES
+
+-coisas que acontecem no link quando clica:
+
+-> no style da página
+body {font-family: Arial, Helvetica, sans-serif;}
+
+a {color: #ff0000;
+   text-decoration: none;} (SEM SUBLINHADOS)   
+
+a:visited {color: darkred;} (MUDA DE COR DEPOIS DE VISITADO)
+
+a:hover {color: black;
+         text-decoration: underline;}
+
+a:active {color: yellow;} (QUANDO CLICA)
+
+->no codigo, exemplo:
+<h1>Personalizando Links</h1>  
+<ul>
+<li><a href="https://www.google.com.br" target="_blank">Github</a></li>
+
+----------
+
+PSEUDO-ELEMENTO (coisas antes e/ou depois dos links)
+
+a::before {content: '[ link]';
+
+a::after {content: '[ link]'; (PALAVRA QUE APARECE ESCRITO 'LINK')
+   text-decoration: none;
+   font-weight: normal;
+   color: white;}
+
+>>> OU
+
+a::after { content: 'SIMBOLO/EMOJI';}
+
+->Especial: (SELECIONA NOS Q QUER)
+
+->no style: .especial::after {...}
+->na página: <li><a href="https://www.google.com.br" class="especial" target="_blank">Github</a></li>
+
+->Simbolos
+-o : = pseudo-classe
+-o :: = pseudo-element
+-> = children
+
+-----------
+
+

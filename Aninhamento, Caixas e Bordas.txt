@@ -1,0 +1,108 @@
+Modelo de caixas:
+
+-height
+-width
+-border
+-padding (distanciamento da borda interno)
+-margin (distanciamento da borda externo)
+-outline (contorno da borda interna, dentro da borda externa)
+
+--------------
+
+Tipos de caixa:
+
+-box-level (OCUPA LARGURA TOTAL DA TELA/CRIA CAIXAS DENTRO GRANDES, QUEBRA LINHA)
+ex: <div>
+<h1>-<h6>
+<p>
+<main>
+<header>
+<nav>
+<article>
+<aside>
+<footer>
+<form>
+<video>
+
+-inline-level (CRIA CAIXAS DENTRO PEQUENAS DO TAMANHO DO TEXTO, Ñ QUEBRA LINHA)
+ex: <span>
+<a>
+<code>
+<small>
+<strong>
+<em>
+<sup>-<sub>
+<label>
+<button>
+<input>
+<select>
+
+--------
+
+USAR INSPECIONAR DA PÁGINA PRA VER EM TEMPOR REAL, E COLA O COD NO VISUALCODE
+
+----------
+
+MARGIN E PADDING - BOX-LEVEL
+
+->top, right, bottom, left
+
+-centralizar caixa:
+margin: auto;
+
+-SHORTHANDS:
+
+h1 {
+
+border: 10px solid darkslategrey
+padding: 10px; (QUANDO TODOS IGUAIS, SE NÃO, SÃO T R B L) 
+margin: 20px auto 40px auto;
+outline: 5px dashed bisque;
+
+-> display: block OU display: inline
+
+---------------
+
+BORDAS PERSONALIZADAS COM IMAGEM
+
+->no style
+h1 {
+border: 12px solid black;
+padding: 10px;
+border-image-source: url('borda.png');
+border-image-slice: 27; (FATIA A IMAGEM)
+border-image-repeat: repeat OU stretch(ESTICA);}
+
+->SHORTHAND:
+border-image: url('borda.png') 27 repeat;
+--------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

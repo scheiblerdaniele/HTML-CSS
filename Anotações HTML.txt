@@ -1,0 +1,38 @@
+Anotações:
+
+Seleciona + CTRL+SHIFT+P + (wrap with abreviation) + enter + TAG
+
+-Negrito: tag strong
+-Itálico: tag em
+-Style no head pra background color de texto
+-Grande: big obsoleto
+-Pequeno: small
+-Sublinhado: ins
+-Riscado: del
+-Sobrescrito: pra cima, tag sup
+-Subescrito: h20, tag sub
+-Fonte bem espaçada: code (sem parágrafos), coloca <pre> dentro do code pra ficar parágrafos.
+-Alinhar parágrafo inteiro: seleciona+shift+tab
+-Citação(aspas): tag q
+-Citação deslocada pra direita: <blockquote>, cite="endereço do texto" (dentro da tag)
+-Abreviações que aparece no cursor: tag abbr
+-Listas com números: <ol> <li>itenm</li>, ele enumera sozinho, não precisa </li>
+-Listas com outras opções: <ol type>, numeros romanos, abcd...
+-Listas desordenadas: <ul type='square'>
+-Listas com tópicos diferentes, mas q a numeração segue, <ol type "a" starts="5"> (5=e, é contagem numérica).
+-Termo e definição: <dt>Assunto</dt><dd>O que é</dd>(o google usa isso pra busca então é importante ter no código)
+-Adicionar texto como url: seleciona texto, tag <a>
+-Url que abre em nova aba: dentro da tag a, depois da url, target="_blank" rel="external">
+-Link interno: ctrl+espaço (páginas q estão na mesma página no visual code).
+-Link que não aparece em busca: rel="nofollow"
+-Link de página inicial: tag a, dentro de "link interno", coloca "../index.html"
+-Types: https://www.iana.org/assignments/media-types/media-types.xml
+-Colocar imagens: <picture><source media="(max-widht: xxpx)" srcset="local da imagem" type="imagepng"><img src="Imagens/imagem.jpg"></picture>
+-Colocar música: tag audio, controls autoplay=""
+-Colocar música 2: <audio>tag source src, type="audio/mpeg"
+-Colocar vídeo: usar Handbreak pra mudar extensão do video para vimeo youtube 720p30, qualidade video 1080p, mais nunca hospedar próprio site (tag videos hospeda no site do cliente)
+-> <video width="500" poster="endereço capa do video" controls autoplay loop>
+<source src="endereço" type"video/mp4"</video> 
+<source src="endereço" type"video/ogv"</video>
+(colocar todos os tipos mp4, ogv.. pq depende do navegador)
+-Hospedar video melhor jeito: video do Youtube, incorporar. Vimeo incorporação.
