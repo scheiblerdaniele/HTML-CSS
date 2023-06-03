@@ -208,5 +208,10 @@ a::after { content: 'SIMBOLO/EMOJI';}
 -> = children
 
 -----------
+IMAGEM DE FUNDO
+
+body {background-image: url(imagens/wallpaper001.jpg);}
+
+
 
 
