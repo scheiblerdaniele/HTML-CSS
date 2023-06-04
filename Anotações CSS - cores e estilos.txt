@@ -212,8 +212,16 @@ IMAGEM DE FUNDO
 
 body {background-image: url(imagens/wallpaper001.jpg);}
 
-ALINHAR:
+-> ALINHAR:
 background-position: center center;
 height: 98vh;
 
+-> OCUPA 100%
+body {
+   height: 100vh;
+   background-color: black;
+   background-image: url(imagens/wallpaper002.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
 
