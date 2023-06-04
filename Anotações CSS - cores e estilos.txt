@@ -224,4 +224,9 @@ body {
    background-position: center center;
    background-repeat: no-repeat;
    background-size: cover;
+   background-attachment: fixed;
+
+->SHORTHAND DO COD DE CIMA
+background: black url(imagens/wallpaper002.jpg) center center no-repeat fixed;
+background-size: cover;
 
