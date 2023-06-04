@@ -230,3 +230,17 @@ body {
 background: black url(imagens/wallpaper002.jpg) center center no-repeat fixed;
 background-size: cover;
 
+-----------
+ALINHAR TITULO COM TAMANHO DA TELA
+-> NO STYLE.CSS
+
+html, body {
+        min-width: 50vh; (AQUI)
+        background-color: darkgray;
+    }
+
+----E----
+header  > h1 {
+padding-top: 7vh;}
+
+
