@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas grandes</title>
+    <Style>
+body {
+            font-family: arial;
+}
+
+table {
+    width: 500px;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+thead, tfoot {
+    background-color: grey;
+    color: white;
+}
+
+td.num {
+    text-align: right;
+}
+    </Style>
+</head>
+<body>
+    <h1>Tabelas Grandes</h1>
+<!-- ANATOMIA TABELAS GRANDES
+TABLE
+CAPTION -LEGENDA DA TABELA
+THEAD -TR, TD(dado), TH(titulo)
+TBODY -TR, TD, TH
+TFOOT -TR, TD, TH
+-->
+
+<table>
+    <caption>População das unidades federativas</caption>
+    <thead>
+        <tr>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px">População</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>São Paulo</td> 
+          <td class="num">45 919 049</td> 
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+        </tr>
+
+    </tbody>
+    <tfoot>
+       <tr>
+        <th scope="row">Total de habitantes</th>
+        <td class="num"><strong>0000</strong></td>
+       </tr> 
+    </tfoot>
+
+
+</table>
+</body>
+</html>
