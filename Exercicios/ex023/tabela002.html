@@ -13,6 +13,7 @@ body {
 table {
     width: 500px;
     border-collapse: collapse;
+    position: relative;
 }
 
 td, th {
@@ -28,13 +29,24 @@ caption {
 }
 
 thead, tfoot {
-    background-color: grey;
+    background-color: #808080;
     color: white;
+}
+
+thead > tr > th {
+    position: sticky; /*FIXA O CABEÇALHO MESMO ROLANDO A TELA PRA BAIXO */
+    top: -1px;
+    background-color: #808080;
 }
 
 td.num {
     text-align: right;
 }
+
+tbody > tr:nth-child(2n) { /* UMA SIM UMA NAO - OU 'ODD'/EVEN CELULAS IMPARES E PARES */
+    background-color: lightgray;
+}
+
     </Style>
 </head>
 <body>
@@ -59,6 +71,54 @@ TFOOT -TR, TD, TH
         <tr>
           <td>São Paulo</td> 
           <td class="num">45 919 049</td> 
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+            </tr>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
         </tr>
         <tr>
             <td>Minas Gerais</td>

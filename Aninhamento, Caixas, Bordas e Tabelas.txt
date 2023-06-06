@@ -83,11 +83,76 @@ div#q2 { background-image: linear-gradient(to bottom, yellow, red);}
 
 div#q3 { background-image: url(imagens/pattern003.png);}
 
+----------------
+FIXA CABEÇALHO TABELA
 
+thead > tr > th {
+    position: sticky; /*FIXA O CABEÇALHO MESMO ROLANDO A TELA PRA BAIXO */
+    top: -1px;
+    background-color: #808080;
+}
 
+(O CABEÇALHO ROLA JUNTO COM A TABELA ATÉ O FINAL DELA)
 
+----------
+EXPANDIR CELULA PRA 2 COLUNAS
 
+<tr>
+    <td>A</td>
+    <td colspan="2">B</td>
+    </tr>
 
+(B FICA EM 2 ESPAÇOS PARA O LADO)
+
+----------
+
+EXPANDIR CELULA PRA CIMA E BAIXO
+
+<tr>
+  <td rowspan="3">D</td>
+
+(D OCUPA LINHAS DE CIMA E BAIXO)
+
+-----------
+
+ROWGROUP (AJUDA NA SEMANTICA)
+
+<tr>
+<th scope="col">Grupos</th>
+<th scope="col">Nomes</th>
+<th cosplan="3" scope="colsgroup">Filmes</th>
+
+(COL=INFOS EM COLUNA; COLSGROUP=COM MESCLAGEM EM COLUNAS; ROWGROUP=COM MESCLAGEM EM LINHAS)
+
+------------
+
+COLUNA DE UMA COR
+
+-> NO STYLE
+  col.csexo {
+        background-color: green;
+    }
+
+->NO COD
+<table>
+    <colgroup>
+    <col class="cnome">
+    <col class="csexo"> (VAI FICAR VERDE)
+    <col class="ccidade">
+    <col class="cprof">
+    </colgroup>
+
+----------------
+
+TABELA GRANDE Q CRIA ROLAGEM PARA O LADO
+RESTANTE DA PAGINA FICA FIXA
+
+->envelopa a tag <table> em <div>
+->coloca id="container"
+->no <style> coloca:
+  div#container {
+      overflow-x: auto;
+        }
 
 
 
