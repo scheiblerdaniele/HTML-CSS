@@ -22,4 +22,4 @@ iframe#tela {
 
 -----------------------
 
-C:\Users\danie\OneDrive\Documentos\Estudos\HTML-CSS\Exercicios\ex024\imagens\cait-ellis-Erld-XTqXv0-unsplash.jpg
+COLOCAR MAPAS COPIANDO ENDEREÇO DO GOOGLE MAPS
