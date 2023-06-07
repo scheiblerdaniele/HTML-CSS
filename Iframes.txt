@@ -1,0 +1,25 @@
+ABRIR IFRAME DENTRO DE UMA PAGINA
+
+-> LISTAS QUE QUANDO CLICA ABAIXO ABAIXO:
+
+no body:
+
+<ul>
+<li><a href="pagina001.html" target="frame">Primeira página</a></li>
+<li><a href="pagina002.html">Segunda página</a></li>
+</ul>
+
+<iframe id="tela" name="frame" src="">Seu navegador não é compatível</iframe>
+
+no style
+
+iframe#tela {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+
+ }
+
+-----------------------
+
+C:\Users\danie\OneDrive\Documentos\Estudos\HTML-CSS\Exercicios\ex024\imagens\cait-ellis-Erld-XTqXv0-unsplash.jpg
