@@ -1,3 +1,7 @@
 Formulários
 
 ex025
+
+-----
+Metodo GET -> até 3mb
+quando carregar fotos usar POST
